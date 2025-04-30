@@ -1,0 +1,122 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-slider {
+  height: 100%;
+}
+
+.hero-slider .slide {
+  position: relative;
+  background: url('../images/jazz-banner.jpg') no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-slider .slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  padding: 30px;
+  max-width: 800px;
+}
+
+.hero-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+}
+
+.slick-prev, .slick-next {
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  background: rgba(0,0,0,0.5);
+  border-radius: 50%;
+}
+
+.slick-prev:hover, .slick-next:hover {
+  background: #d4a017;
+}
+
+.slick-dots {
+  bottom: 20px;
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+  color: #fff;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #d4a017;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 40px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#tabs {
+  margin-top: 20px;
+}
+
+#tabs ul {
+  background: #1C2526;
+  border-radius: 6px 6px 0 0;
+}
+
+#tabs ul li a {
+  color: #F7F5E6;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+}
+
+#tabs ul li.ui-tabs-active a {
+  background: #B88C14;
+  color: #1C2526;
+}
+
+#tabs div {
+  padding: 20px;
+  background: #F7F5E6;
+  border-radius: 0 0 6px 6px;
+  color: #1C2526;
+}
+
+@media (max-width: 768px) {
+  .hero-content h2 {
+      font-size: 2rem;
+  }
+
+  .hero-content p {
+      font-size: 1rem;
+  }
+}
